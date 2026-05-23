@@ -104,13 +104,22 @@ Response: {"queue": "orders", "pending_messages": 5, "dlq_messages": 0}
 
 ## 🗂️ Project Structure
 
+# Message Queue System
+
+A full-stack message queue application featuring a Spring Boot backend and a React frontend.
+
+---
+
+## 📂 Project Structure
+
+```text
 message-queue-system/
 ├── src/main/java/com/messagequeue/
-│   ├── Application.java          # Spring Boot entry point
+│   ├── Application.java                 # Spring Boot entry point
 │   ├── controller/
-│   │   └── QueueController.java  # REST endpoints
+│   │   └── QueueController.java         # REST endpoints
 │   ├── service/
-│   │   └── QueueService.java     # Business logic
+│   │   └── QueueService.java            # Business logic
 │   ├── repository/
 │   │   ├── MessageRepository.java
 │   │   ├── DeadLetterQueueRepository.java
@@ -119,14 +128,14 @@ message-queue-system/
 │       ├── Message.java
 │       ├── DeadLetterQueue.java
 │       └── ConsumerGroup.java
-├── frontend/                      # React app
+├── frontend/                            # React app
 │   ├── src/
 │   │   ├── App.js
 │   │   ├── App.css
 │   │   └── index.js
 │   └── package.json
-├── pom.xml                        # Maven config
-└── README.md                      # This file
+├── pom.xml                              # Maven config
+└── README.md                            # Project documentation
 
 ## 💡 How It Works
 
