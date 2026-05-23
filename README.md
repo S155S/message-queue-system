@@ -14,24 +14,14 @@ A distributed message queue system built with **Spring Boot** backend and **Reac
 
 ## 🏗️ Architecture
 
-### 🔄 Message Flow Diagram
-
-This diagram illustrates how a message moves between the Frontend, Backend, and Database in this system.
-
-```mermaid
-sequenceDiagram
-    participant Frontend as Frontend (React)
-    participant Backend as Backend (Spring Boot)
-    participant DB as Database (H2)
-
-    Frontend->>Backend: --Send Message------------->
-    Backend->>DB: |--Save to Queue--------->
-    
-    Frontend-->>Backend: |<--Get Message-------------
-    Backend-->>DB: |<--Fetch Message---------
-
-    Frontend->>Backend: |--Acknowledge Message------->
-    Backend->>DB: |--Mark as Processed--->
+Frontend (React)         Backend (Spring Boot)        Database (H2)
+        |                         |                         |
+        |--Send Message----------->|                         |
+        |                         |--Save to Queue--------->|
+        |                         |                         |
+        |<--Get Message------------|<--Fetch Message---------|
+        |                         |                         |
+        |--Acknowledge Message---->|--Mark as Processed---->|
 ## 🚀 Tech Stack
 
 **Backend:**
