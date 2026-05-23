@@ -14,13 +14,14 @@ A distributed message queue system built with **Spring Boot** backend and **Reac
 
 ## 🏗️ Architecture
 
-Frontend (React)          Backend (Spring Boot)       Database (H2)
-|                            |                          |
-|--Send Message------------->|                          |
-|                            |--Save to Queue--------->|
-|<--Get Message-------------|<--Fetch Message---------|
-|                            |
-|--Acknowledge Message------->|--Mark as Processed--->|
+Frontend (React)         Backend (Spring Boot)        Database (H2)
+        |                         |                         |
+        |--Send Message----------->|                         |
+        |                         |--Save to Queue--------->|
+        |                         |                         |
+        |<--Get Message------------|<--Fetch Message---------|
+        |                         |                         |
+        |--Acknowledge Message---->|--Mark as Processed---->|
 
 ## 🚀 Tech Stack
 
